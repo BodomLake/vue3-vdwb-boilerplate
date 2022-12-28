@@ -2,15 +2,13 @@ const { defineConfig } = require('@vue/cli-service')
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin') // 显示编译时长
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const outputDir = 'vite-builds'
-
 module.exports = defineConfig({
   transpileDependencies: true,
   productionSourceMap: false,
   publicPath: '/',
   indexPath: "index.html",
   filenameHashing: true,
-  outputDir: outputDir,
+  outputDir: 'vite-builds',
   assetsDir: 'assets',
   // 开发服务器
   devServer: {
